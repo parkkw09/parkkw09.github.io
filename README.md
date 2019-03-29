@@ -1,8 +1,6 @@
-[[TableOfContents]]
+# 정보
 
-== 정보 ==
-
-== 윈도우에서 네트워크 드라이브 연결 ==
+## 윈도우에서 네트워크 드라이브 연결
 
 net drive: \\ip /user:id pw
 
