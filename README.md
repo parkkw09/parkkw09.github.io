@@ -2,7 +2,7 @@
 
 ## 윈도우에서 네트워크 드라이브 연결
 
-```sh
+```windows
 $ net drive: \\ip /user:id pw
 ```
 
