@@ -3,6 +3,13 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+#rx노트 6
+Observable을 계속 쓸것인가 Single로 교체할 것인가
+그 것이 문제로다.
+2019.04.01
+```
+
+```
 #rx노트 5
 데이터베이스 쓰기가 겁나 편해졌어용~
 아...생각해보니 thread처리 안했네 ㅋㅋㅋㅋ
