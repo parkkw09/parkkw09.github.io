@@ -313,6 +313,12 @@ file [꺼낸 .o파일명] //꺼낸 .o파일의 정보를 확인한다. 아래와
 .o : ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), not stripped
 ```
 
+## Homebrew 사용시 이전버전 가져오기
+```
+brew edit xxx 로 저장소 기록을 변경한다.
+homebrew github에서 히스토리를 통해 정보를 찾은 다음 교체해주면 된다.
+```
+
 ## Reference Link
 https://github.com/AgustaRC/MVVMArchitecture.git
 
