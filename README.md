@@ -352,6 +352,7 @@ git clone https://github.com/googlesamples/android-audio-high-performance.git
 git clone https://github.com/googlesamples/android-Camera2Basic.git
 git clone https://github.com/googlesamples/android-Camera2Video.git
 git clone https://github.com/googlesamples/android-Camera2Raw.git
+git clone https://github.com/googlesamples/android-databinding.git
 cd ..
 git clone https://github.com/kunny/kunny-kotlin-book.git -b dagger-step-2 kunny-kotlin-book-dagger
 echo 'clone complete'
