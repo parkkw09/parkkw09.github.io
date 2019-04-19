@@ -3,6 +3,21 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+```
+#rx노트 7
+결국 코드에 coroutine kotlin이 들어왔다.
+왜 있는지도 알고 rx랑 비슷한 것도 알기 때문에
+한번 익혀나 볼까? 교보재로 딱이군 이런생각이 들긴하지만
+개발자라면 가장 피해야 하는 상황이 여러번 코드 내에 등장하고 있는데
+지금 이 상황도 그중 하나이다.
+나중에 무슨 상황이 일어날진 잘 알고 있다.
+그렇다고 배워가는 입장에 내 식대로 무조건 밀어 붙히기도 뭐하고
+한번 끝까지 만들어나 보고 싶다.
+지금 내가 배우려는 것을 모두 동원하여...
+2019.04.19
+```
+
+```
 #rx노트 6
 Observable을 계속 쓸것인가 Single로 교체할 것인가
 그 것이 문제로다.
