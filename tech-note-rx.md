@@ -3,7 +3,6 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
-```
 #rx노트 7
 결국 코드에 coroutine kotlin이 들어왔다.
 왜 있는지도 알고 rx랑 비슷한 것도 알기 때문에
