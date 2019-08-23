@@ -319,9 +319,6 @@ brew edit xxx 로 저장소 기록을 변경한다.
 homebrew github에서 히스토리를 통해 정보를 찾은 다음 교체해주면 된다.
 ```
 
-## Reference Link
-https://github.com/AgustaRC/MVVMArchitecture.git
-
 ## Make shell
 
 #### get samples
