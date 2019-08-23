@@ -3,6 +3,12 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+#docker 3
+형이 미안해. 곧 관심가져 줄께. 언젠간 젠킨스 설치 시작해볼 날이 올꺼야.
+2019.08.23
+```
+
+```
 #docker 2
 컨테이너를 만들어서 블라블라 SSH 셋업 하고 컨테이너를 이미지로 만들어서 허브.도커에 올리고
 다른 컴터로 가서 그걸 내려받아 컨테이너로 만들고 작동시켜서 ssh 접속 까지 확인하였다.
