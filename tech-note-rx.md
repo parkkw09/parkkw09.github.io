@@ -3,6 +3,16 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+#rx노트 8
+이제 어느정도 마무리도 되어가고
+그동안 모델 레이어에서만 사용을 고집했던 것(실제론 뷰모델)을 벗어나
+뷰에서도 접근을 시도해 봐야겠다. 잘만쓰면 각종 예외처리 및 기타 잡다한것이
+전부 해결이 되는 맥가이버 칼이다.
+물론 내가 맥가이버 칼을 만들수있어야 하는건 함정.
+2019.08.23
+```
+
+```
 #rx노트 7
 결국 코드에 coroutine kotlin이 들어왔다.
 왜 있는지도 알고 rx랑 비슷한 것도 알기 때문에
