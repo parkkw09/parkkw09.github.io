@@ -3,6 +3,19 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+#android #view 4
+리사이클러 무한 스크롤에서 계속 뭔가 안되서 샘플 하나 통으로 다시 만들어 보았다.
+잘된다...... 분명히 되는 코드인걸 아는데 작동이 안되서 계속 고민중이었는데
+역시 급하게 만들면 체한다.
+그동안은 특별히 페이징 처리를 할 필요가 없어서 신경쓰지 않았던 내용인데
+확실히 notify 시리즈가 많은 이유가 있었다.
+이거 처음 만들때 급하게 하나 만든거였는데 지금 코드를 보니
+빵꾸가 엄청 많다.
+확실히 급하게 만들면 체한다2
+2019.08.28
+```
+
+```
 #android #view 3
 이번 프로젝트는 최근에 나름 핫한 3종 세트
 aac, kotiln, rx를 이용하였다.
