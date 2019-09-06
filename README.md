@@ -161,6 +161,33 @@ $ wget https://dl.google.com/android/repository/android-ndk-r13b-darwin-x86_64.z
 $ sdkmanager --update
 ```
 
+#### 사인키 생성 수동
+
+```sh
+$ keytool -genkey -v -keystore my-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias
+```
+
+#### 사인키 확인
+
+```sh
+$ jarsigner -vertify -verbose -certs name.apk
+$ keytool -list -printcert - jarfile name.apk
+```
+
+#### 앱 서명 수동
+
+```sh
+$ zipalign -v -p 4 unsigned.apk unsigned-align.apk
+$ apksigner sign --ks keystore.jks --out signed.apk unsigned-align.apk
+```
+
+#### 앱 서명 확인
+
+```sh
+$ apksigner verify name.apk
+```
+
+
 ## Git 사용법
 
 #### 신규 생성
@@ -250,8 +277,13 @@ $ git submodule update --init --recursive
 #### TAG
 
 ```sh
+add
 $ git tag -a v1.4 -m "my version 1.4"
 $ git push origin v1.5
+
+del
+$ git tag -d v1.4
+$ git push origin :v1.4
 ```
 
 #### another remote pull
