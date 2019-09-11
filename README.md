@@ -284,6 +284,9 @@ $ git push origin v1.5
 del
 $ git tag -d v1.4
 $ git push origin :v1.4
+
+checkout
+$ git checkout tags/v1.4 -b v1.4
 ```
 
 #### another remote pull
