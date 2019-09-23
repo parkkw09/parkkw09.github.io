@@ -3,6 +3,15 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+#docker 5
+몇번 두드려 보니 컨테이너 만들고 작동시키는 것이 생각 났다.
+처음 젠킨스를 가동시키고 설정하는 부분에서 에센셜 설치가 있는데
+여기서 에러가 났다....
+잠시 쉬어야 겠다.
+2019.09.23
+```
+
+```
 #docker 4
 원래 이것저것 할일이 많지만 2주정도는 느긋하게 보내도 되는 시기이다.
 그래서 회사맥에 도커를 설치하고 있다. 목표는 젠킨스로 자동화 빌드를 구성하고
