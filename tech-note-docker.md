@@ -3,6 +3,32 @@
 [![GPL2](https://img.shields.io/badge/license-GPL2-yellowgreen.svg)](https://github.com/parkkw09/parkSync/edit/master/LICENSE)
 
 ```
+#docker 6
+이것저것 자료를 찾다보면 도커 허브에 있는 젠킨스 공식 이미지가 1년이 넘었다는 것
+WAR를 가동시켜도 에센셜 설치에서 죄다 에러난다는거.
+그래서 대부분 알려주는 자료는 WAR을 미러 사이트에서 직접 받으라는 것과
+LTS 버전의 젠킨스를 이용하라는 것이다.
+WAR을 교체하기 위해 미러사이트를 확인하다가 혹시나 해서 도커 허브를 다시 보았는데
+공식 이미지 바로 밑에 jenkins/jenkins:lts 라는 이름으로 존재하더라.
+결국 작업 시작화면까지 봤다. 야호.
+
+오늘의 요약
+docker run -d -p 8080:8080 -v ~/Downloads/jenkins:/var/jenkins --name jenkins -u root jenkins/jenkins:lts
+docker exec -it -u 0 jenkins /bin/bash
+docker ps -a
+docker rm
+docker rmi
+docker images
+docker logs
+docker stop
+docker pull
+HOST:CLIENT
+-u 0 == -u root
+이정도만 응용할줄 알면 그냥 켤순 있음.
+2019.09.23
+```
+
+```
 #docker 5
 몇번 두드려 보니 컨테이너 만들고 작동시키는 것이 생각 났다.
 처음 젠킨스를 가동시키고 설정하는 부분에서 에센셜 설치가 있는데
