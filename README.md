@@ -7,6 +7,13 @@
 [Naverblog](https://parkkw09.blog.me/)
 [Tistory](https://parkpt09.tistory.com/)
 
+## FFMPEG
+
+```sh
+$ ffmpeg -i inputfile.mkv -c:v copy -c:a ac3 outputfile.mkv
+$ ffmpeg -i 00008.m2ts -map 0:8 -c:s copy "08.sup"
+```
+
 ## 윈도우에서 네트워크 드라이브 연결
 
 ```sh
