@@ -14,21 +14,21 @@
 
 project
 
-leonardo (https://github.com/parkkw09/leonardo.git)
-seurat (https://github.com/parkkw09/seurat.git)
-mexwell (https://github.com/parkkw09/mexwell.git)
+1. leonardo[멀티미디어라이브러리빌드] (https://github.com/parkkw09/leonardo.git)
+2. seurat[멀티스트리밍라이브러리] (https://github.com/parkkw09/seurat.git)
+3. mexwell[멀티스트리밍데모] (https://github.com/parkkw09/mexwell.git)
 
 test
 
-customlayout1 (https://github.com/parkkw09/customlayout1.git)
-customlayout2 (https://github.com/parkkw09/customlayout2.git)
+1. customlayout1[리스트뷰 데모] (https://github.com/parkkw09/customlayout1.git)
+2. customlayout2[리스트뷰 데모] (https://github.com/parkkw09/customlayout2.git)
 
 fork
 
-nginx-rtmp-module (https://github.com/parkkw09/nginx-rtmp-module.git)
-ticTacToe (https://github.com/parkkw09/ticTacToe.git)
-todo-mvi-rxjava-kotlin (https://github.com/parkkw09/todo-mvi-rxjava-kotlin.git)
-sunflower (https://github.com/parkkw09/sunflower.git)
-architecture-samples (https://github.com/parkkw09/architecture-samples.git)
-architecture-components-samples (https://github.com/parkkw09/architecture-components-samples.git)
-kunny-kotlin-book (https://github.com/parkkw09/kunny-kotlin-book.git)
+1. nginx-rtmp-module[nginx custom] (https://github.com/parkkw09/nginx-rtmp-module.git)
+2. ticTacToe[MVC/MVP/MVVM Sample] (https://github.com/parkkw09/ticTacToe.git)
+3. todo-mvi-rxjava-kotlin[MVI Sample] (https://github.com/parkkw09/todo-mvi-rxjava-kotlin.git)
+4. sunflower[android blue print sample] (https://github.com/parkkw09/sunflower.git)
+5. architecture-samples[android arch sample] (https://github.com/parkkw09/architecture-samples.git)
+6. architecture-components-samples[android arch components] (https://github.com/parkkw09/architecture-components-samples.git)
+7. kunny-kotlin-book[kotlin book sample] (https://github.com/parkkw09/kunny-kotlin-book.git)
