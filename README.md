@@ -10,4 +10,25 @@
 [Twitter](https://twitter.com/parkkw09/)
 [Naverblog](https://parkkw09.blog.me/)
 
-지금부터 pull request를 테스트합니다.
+저장소 정보
+
+project
+
+leonardo (https://github.com/parkkw09/leonardo.git)
+seurat (https://github.com/parkkw09/seurat.git)
+mexwell (https://github.com/parkkw09/mexwell.git)
+
+test
+
+customlayout1 (https://github.com/parkkw09/customlayout1.git)
+customlayout2 (https://github.com/parkkw09/customlayout2.git)
+
+fork
+
+nginx-rtmp-module (https://github.com/parkkw09/nginx-rtmp-module.git)
+ticTacToe (https://github.com/parkkw09/ticTacToe.git)
+todo-mvi-rxjava-kotlin (https://github.com/parkkw09/todo-mvi-rxjava-kotlin.git)
+sunflower (https://github.com/parkkw09/sunflower.git)
+architecture-samples (https://github.com/parkkw09/architecture-samples.git)
+architecture-components-samples (https://github.com/parkkw09/architecture-components-samples.git)
+kunny-kotlin-book (https://github.com/parkkw09/kunny-kotlin-book.git)
