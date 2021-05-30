@@ -22,6 +22,7 @@ test
 
 1. customlayout1[리스트뷰 데모] (https://github.com/parkkw09/customlayout1.git)
 2. customlayout2[리스트뷰 데모] (https://github.com/parkkw09/customlayout2.git)
+3. s526[MVVM Design TEST] (https://github.com/parkkw09/s526)
 
 fork
 
