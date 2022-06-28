@@ -8,7 +8,7 @@
 [Facebook](https://www.facebook.com/parkkw09/)
 [Instagram](https://www.instagram.com/parkkw09/)
 [Twitter](https://twitter.com/parkkw09/)
-[Naverblog](https://parkkw09.blog.me/)
+[Naverblog](https://blog.naver.com/parkkw09/)
 
 저장소 정보
 
