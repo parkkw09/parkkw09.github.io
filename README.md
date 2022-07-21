@@ -5,9 +5,6 @@
 
 네이버 블로그로 모든 자료 이동
 
-[Facebook](https://www.facebook.com/parkkw09/)
-[Instagram](https://www.instagram.com/parkkw09/)
-[Twitter](https://twitter.com/parkkw09/)
 [Naverblog](https://blog.naver.com/parkkw09/)
 
 저장소 정보
