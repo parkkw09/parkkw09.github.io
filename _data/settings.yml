@@ -12,7 +12,7 @@ menu:
 - {name: '기술',         url: 'tech'}
 - {name: '참고문서',      url: 'reference'}
 - {name: '정보',         url: 'info'}
-- {name: '피터 파크?',    url: 'about'}
+- {name: 'About',       url: 'about'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
