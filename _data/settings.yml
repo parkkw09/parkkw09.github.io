@@ -11,7 +11,7 @@ menu:
 - {name: '발견',         url: 'discovery'}
 - {name: '기술',         url: 'tech'}
 - {name: '참고문서',      url: 'reference'}
-- {name: '정보',         url: 'info'}
+- {name: 'Information',         url: 'info'}
 - {name: 'About',       url: 'about'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer

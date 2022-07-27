@@ -34,5 +34,3 @@ permalink: /about
 5. architecture-samples [android arch sample](https://github.com/parkkw09/architecture-samples.git)
 6. architecture-components-samples [android arch components](https://github.com/parkkw09/architecture-components-samples.git)
 7. kunny-kotlin-book [kotlin book sample](https://github.com/parkkw09/kunny-kotlin-book.git)
-
-Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused publishing platform for your publication site or blog. You can find everything you need to get started under documentation. For more information on how to install and use this theme, check out [the documentation]({{ site.github.url }}{% post_url 2016-10-10-getting-started %}).
