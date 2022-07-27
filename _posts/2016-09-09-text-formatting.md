@@ -2,8 +2,8 @@
 layout: post
 title: "Text Formatting"
 author: "Paul Le"
-categories: sample
-tags: [sample]
+categories: tech
+tags: [tech]
 image: arctic-1.jpg
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Welcome to Millennial!"
 author: "Paul Le"
-categories: documentation
-tags: [documentation,sample]
+categories: reference
+tags: [reference,tech]
 image: cuba-1.jpg
 ---
 
