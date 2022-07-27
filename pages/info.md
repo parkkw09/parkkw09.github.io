@@ -1,6 +1,6 @@
 ---
 layout: page
-title: info
+title: Tip/Information
 permalink: /info
 ---
 
