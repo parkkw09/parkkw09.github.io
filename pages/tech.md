@@ -1,6 +1,6 @@
 ---
 layout: category
-title: 기술
+title: tech
 category: tech
 permalink: /tech
 ---

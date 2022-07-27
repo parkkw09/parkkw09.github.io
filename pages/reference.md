@@ -1,6 +1,6 @@
 ---
 layout: category
-title: 참고문서
+title: reference
 category: reference
 permalink: /reference
 ---

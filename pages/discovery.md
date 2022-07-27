@@ -1,6 +1,6 @@
 ---
 layout: category
-title: 발견
+title: discovery
 category: discovery
 permalink: /discovery
 ---

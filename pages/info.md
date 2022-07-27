@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 정보
+title: info
 permalink: /info
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: category
-title: 일상
+title: daily
 category: daily
 permalink: /daily
 ---
