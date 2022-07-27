@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 피터 파크?
+title: about
 permalink: /about
 ---
 
