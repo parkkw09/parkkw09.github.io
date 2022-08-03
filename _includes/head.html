@@ -21,7 +21,23 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
   <!-- Google Analytics -->
-  {% include google-analytics.html %}
-  <!-- Use Jekyll SEO plugin -->
+  <!-- {% include google-analytics.html %} -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32412Y6YPE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-32412Y6YPE');
+  </script>
+
+  <!-- Google Adsense-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5646092164104482"
+     crossorigin="anonymous"></script>
+
+
+<!-- Use Jekyll SEO plugin -->
   {% seo %}
 </head>
