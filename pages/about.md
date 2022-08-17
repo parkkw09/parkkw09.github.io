@@ -4,11 +4,6 @@ title: About Blog
 permalink: /about
 ---
 
-# 인생은 한방
-
-네이버 블로그로 모든 자료 이동
-1. Naver [네이버 블로그](https://blog.naver.com/parkkw09/)
-
 # 저장소 정보
 
 ## project
