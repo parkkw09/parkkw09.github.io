@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2022-08-16-VIPER.md",
+            "file": "_posts/2022-08-04-m1-jekyll.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2022-08-16-VIPER.md",
+                "file": "_posts/2022-08-04-m1-jekyll.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2022-08-16-VIPER.md",
+                "file": "_posts/2022-08-04-m1-jekyll.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2022-08-16-VIPER.md"
+                "file": "_posts/2022-08-04-m1-jekyll.md"
               }
             }
           }
@@ -130,7 +130,9 @@
   },
   "active": "3c9238549a70408a",
   "lastOpenFiles": [
+    "_posts/2022-08-05-S206-AF.md",
     "_posts/2022-08-04-m1-jekyll.md",
-    "_posts/2022-08-05-S206-AF.md"
+    "_posts/2022-08-16-VIPER.md",
+    "_posts/2022-07-27-끄적끄적.md"
   ]
 }
