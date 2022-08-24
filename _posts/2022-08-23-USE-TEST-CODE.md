@@ -3,7 +3,7 @@ layout: post
 title: "테스트 기능을 이용한 구현"
 author: "Peter Park"
 categories: tech
-tags: [tech]
+tags: [tech,swift,unittest,cleanarchitecture]
 image: view-0005.jpg
 ---
 
