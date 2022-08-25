@@ -4,7 +4,7 @@ title: "스위프트 개발 #3"
 author: "Peter Park"
 categories: daily
 tags: [daily,swift,alamofire,concurrency]
-image: view-0003.jpg
+image: view-0006.jpg
 ---
 
 ## 시작
