@@ -128,7 +128,7 @@ func foo() {
 }
 ```
 
-여기서 또 애매해지는게 자바 계열은 exception 처리를 하기 위해 catch 문에서 매게변수를 받게 되는데 스위프트는 그게 없다. 읭??? 자 메세지라도 찍고 싶은데 어쩌지? 이러고 있다가 이것저것 뒤져보니 그냥 아래 처럼 하면 되더라.
+여기서 또 애매해지는게 자바 계열은 exception 처리를 하기 위해 catch 문에서 매게변수를 받게 되는데 스위프트는 그게 없다. 읭??? 에러 메세지라도 찍고 싶은데 어쩌지? 이러고 있다가 이것저것 뒤져보니 그냥 아래 처럼 하면 되더라.
 
 ```
 func foo() {
@@ -173,3 +173,44 @@ func requestCommand(request: Request, callback: @escaping () -> Void) {
 
 이걸 동시성으로 처리하려니 AF.reqeust() 여기까진 좋은데 그다음 response() 따로 존재하지 않았다. 읭??? 잠시 당황을 하고 좀 찾아보다가 아래와 같은 깃헙 메세지를 찾았다.
 
+```
+Alamofire 5.5's concurrency support supports awaiting the full response, result, or throwing value of a request.
+
+let task = AF.request(...).serializingDecodable(Type.self)
+let response = await task.response
+let result = await task.result
+let value = try await task.value
+
+Convenience methods have also been added for the various asynchronous state producers, like onURLSessionTaskCreation.
+
+```
+
+처음 let task 변수를 보게 되면 AF.request().serializingDecodable(Type.Self) 라고 되어 있는데 이게 핵심이었다. 참고로 serializingXXXX는 몇가지 함수를 제공하는데 나는 처음에 string으로 놓고 테스트를 해서 확인하였다. 참고로 Decodable은 JSON과 같은 데이터의 인코딩/디코딩을 위한 함수이다.  
+
+그리고 보통 validate()라는걸 써서 에러 범위라든지 값을 미리 체크하는데 이게 되려면 위와 같이 reponse.result 에서 성공/실패를 구분해야 한다.
+
+그런데 그런것들 없이 value로 바로 던져버린다. 동시성 알라모 파이어에서는... 사실 이게 다 확인이 되는지는 좀더 봐야 겠지만 나는 기존에 확인한 코드와 내가 이해한 방향을 더해 중간점을 찾은 코드를 만들었다.
+
+```
+let response = await AF.request(requestUrl,
+                                method: HTTPMethod.get,
+                                parameters: nil,
+                                encoding: URLEncoding.default)
+                    .validate(statusCode: 200..<500)
+                    .validate(contentType: ["application/json"])
+                    .serializingDecodable(Type.self)
+                    .response
+
+switch response.result {
+    case .success(let data):
+        return data
+    case .failure:
+        throw Error.error()
+}
+```
+
+## 결론
+
+프로그래밍의 방법은 정석이 없다고 생각한다. 다만 모두가 협의하여 상황과 현실에 맞게 만들면 그게 최적화이고 그게 답이라고 생각한다. 이번에 내가 공부해본 것들이 정답이 아닐 순 있다. 정답을 완전히 빗겨나간 결과일 수도 있으나 원래 프로그래밍은 이러면서 배우는거다.
+
+몇년 후에 이글을 보며 이불킥을 날릴것인가??
