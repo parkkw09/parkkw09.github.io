@@ -1,43 +1,68 @@
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)">
+
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
+    {% if page.title == "Home" or page.url == "/" %}
+      {{ site.title }} · {{ site.description }}
     {% else %}
-      {{ page.title }} | {{ site.title }}
+      {{ page.title }} · {{ site.title }}
     {% endif %}
   </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
+
+  <link rel="icon" href="{{ site.github.url }}/favicon.ico">
+
+  <!-- Pretendard 웹폰트 -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin>
+
+  <!-- Site styles -->
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
-  <!-- Use Atom -->
+
   {% feed_meta %}
   <!-- RSS-v2.0
   <link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
   //-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- 깜빡임 방지: 스타일시트 로드 전에 테마 적용 -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'dark' || stored === 'light') {
+          document.documentElement.setAttribute('data-theme', stored);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- MathJax -->
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
-  <!-- Google Analytics -->
-  <!-- {% include google-analytics.html %} -->
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32412Y6YPE"></script>
+  {% if site.data.settings.google-ID and site.data.settings.google-ID != '' %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.settings.google-ID }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-32412Y6YPE');
+    gtag('config', '{{ site.data.settings.google-ID }}');
   </script>
+  {% endif %}
 
-  <!-- Google Adsense-->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5646092164104482"
+  <!-- Google AdSense -->
+  {% if site.data.settings.adsense-client and site.data.settings.adsense-client != '' %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data.settings.adsense-client }}"
      crossorigin="anonymous"></script>
+  {% endif %}
 
-
-<!-- Use Jekyll SEO plugin -->
   {% seo %}
 </head>

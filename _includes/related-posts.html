@@ -1,29 +1,36 @@
+{%- comment -%}
+같은 태그의 관련 포스트를 최대 4개까지 노출합니다.
+{%- endcomment -%}
+{% assign related = '' | split: ',' %}
+{% for tag in page.tags %}
+  {% for mypost in site.tags[tag] %}
+    {% unless mypost.url == page.url %}
+      {% assign related = related | push: mypost %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
+{% if related.size > 0 %}
 <div class="related">
   <h2>{{ site.data.settings.related_posts }}</h2>
-  {% assign listed_posts_urls = page.url | split: ' ' %}
   <ul class="related-posts">
-    {% for tag in page.tags %}
-      {% for mypost in site.tags[tag] limit:2 %}
-        {% if listed_posts_urls contains mypost.url %}
-        {% else %}
-          <li>
-            <h3>
-              <a href="{{ site.github.url }}{{ mypost.url }}">
-                <div class="related-thumbnail">
-                  {% if mypost.image %}
-                    <img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ mypost.image }}">
-                  {% endif %}
-                </div>
-                <div class="related-title">
-                  {{ mypost.title }}
-                </div>
-                <!--<small>{{ mypost.date | date: "%B %-d, %Y" }}</small>-->
-              </a>
-            </h3>
-          </li>
-          {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
-        {% endif %}
-      {% endfor %}
+    {% assign seen = '' | split: ',' %}
+    {% for mypost in related limit:8 %}
+      {% unless seen contains mypost.url %}
+        {% assign seen = seen | push: mypost.url %}
+        <li>
+          <a href="{{ site.github.url }}{{ mypost.url }}">
+            {% if mypost.image %}
+              <div class="related-thumbnail">
+                <img src="{{ site.github.url }}/assets/img/{{ mypost.image }}" alt="">
+              </div>
+            {% endif %}
+            <span class="related-title">{{ mypost.title }}</span>
+            <small style="color: var(--color-text-subtle)">{{ mypost.date | date: "%Y년 %-m월 %-d일" }}</small>
+          </a>
+        </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 </div>
+{% endif %}

@@ -1,24 +1,64 @@
 <header class="site-header">
-  <h3 class="site-title">
-    <a href="{{ site.github.url }}/">{{ site.title }}</a>
-  </h3>
-  <nav class="menu-list">
-    {% for item in site.data.settings.menu %}
-      <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link">{{ item.name }}</a>
-    {% endfor %}
-    {% for item in site.data.settings.social %}
-      <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-    {% endfor %}
-  </nav>
-  <div class="dropdown">
-    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
-    <div class="dropdown-content">
-      {% for item in site.data.settings.menu %}
-        <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link">{{ item.name }}</a>
-      {% endfor %}
-      {% for item in site.data.settings.social %}
-        <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-      {% endfor %}
-    </div>
+  <div class="site-header-inner">
+    <h3 class="site-title">
+      <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    </h3>
+
+    <nav class="site-nav" id="site-nav">
+      <div class="menu-list">
+        {% for item in site.data.settings.menu %}
+          <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link">{{ item.name }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="social-list">
+        {% for item in site.data.settings.social %}
+          {% assign icon_class = item.prefix | default: 'fa-brands' %}
+          {% if item.icon == 'envelope' or item.icon == 'rss-square' or item.icon == 'rss' %}
+            {% assign icon_class = 'fa-solid' %}
+          {% endif %}
+          <a href="{{ item.link }}" class="menu-link" target="_blank" rel="noopener" aria-label="{{ item.icon }}">
+            <i class="{{ icon_class }} fa-{{ item.icon }}" aria-hidden="true"></i>
+          </a>
+        {% endfor %}
+
+        <button class="theme-toggle menu-link" id="theme-toggle" aria-label="테마 전환" title="라이트/다크 모드 전환">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-controls="site-nav" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
   </div>
 </header>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var current = root.getAttribute('data-theme');
+        if (!current) {
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          current = prefersDark ? 'dark' : 'light';
+        }
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+
+    var nav = document.getElementById('site-nav');
+    var menuBtn = document.getElementById('menu-toggle');
+    if (nav && menuBtn) {
+      menuBtn.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('is-open');
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+  })();
+</script>
