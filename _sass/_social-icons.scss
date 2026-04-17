@@ -1,65 +1,19 @@
-@mixin social-media-icon($color, $transition){
-  -webkit-transition: $transition;
-  -o-transition: $transition;
-  -ms-transition: $transition;
-  -moz-transition: $transition;
-  transition: $transition;
-  &:hover{
+@mixin social-hover($color) {
+  transition: color $icon-transition-time;
+  &:hover {
     color: $color;
   }
 }
 
-.fa-envelope {
-  padding: 5px;
-  @include social-media-icon($envelope-color, $icon-transition-time);
-}
-
-.fa-twitter {
-  padding: 5px;
-  @include social-media-icon($twitter-color, $icon-transition-time);
-}
-
-.fa-instagram {
-  padding: 5px;
-  @include social-media-icon($instagram-color, $icon-transition-time);
-}
-
-.fa-github {
-  padding: 5px;
-  @include social-media-icon($github-color, $icon-transition-time);
-}
-
-.fa-linkedin {
-  padding: 5px;
-  @include social-media-icon($linkedin-color, $icon-transition-time);
-}
-
-.fa-facebook {
-  padding: 5px;
-  @include social-media-icon($facebook-color, $icon-transition-time);
-}
-
-.fa-google-plus {
-  padding: 5px;
-  @include social-media-icon($google-color, $icon-transition-time);
-}
-
-.fa-pinterest {
-  padding: 5px;
-  @include social-media-icon($pinterest-color, $icon-transition-time);
-}
-
-.fa-medium {
-  padding: 5px;
-  @include social-media-icon($medium-color, $icon-transition-time);
-}
-
-.fa-codepen {
-  padding: 5px;
-  @include social-media-icon($codepen-color, $icon-transition-time);
-}
-
-.fa-rss-square {
-  padding: 5px;
-  @include social-media-icon($rss-color, $icon-transition-time);
-}
+.fa-envelope    { @include social-hover($envelope-color); }
+.fa-twitter,
+.fa-x-twitter   { @include social-hover($twitter-color); }
+.fa-instagram   { @include social-hover($instagram-color); }
+.fa-github      { @include social-hover(var(--color-text)); }
+.fa-linkedin    { @include social-hover($linkedin-color); }
+.fa-facebook    { @include social-hover($facebook-color); }
+.fa-google-plus { @include social-hover($google-color); }
+.fa-pinterest   { @include social-hover($pinterest-color); }
+.fa-medium      { @include social-hover($medium-color); }
+.fa-codepen     { @include social-hover(var(--color-text)); }
+.fa-rss-square  { @include social-hover($rss-color); }

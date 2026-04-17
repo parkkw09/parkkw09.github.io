@@ -1,0 +1,82 @@
+/*
+  Design tokens — CSS 변수로 라이트/다크 테마를 스위칭합니다.
+  값은 한 곳에서만 관리하세요.
+*/
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f7f7f8;
+  --color-bg-elevated: #ffffff;
+  --color-border: #e6e6ea;
+  --color-border-strong: #d0d0d6;
+  --color-text: #1b1b1f;
+  --color-text-muted: #6b6b73;
+  --color-text-subtle: #9a9aa1;
+  --color-link: #1b1b1f;
+  --color-link-hover: #0066ff;
+  --color-accent: #0066ff;
+  --color-accent-soft: rgba(0, 102, 255, 0.12);
+  --color-code-bg: #f4f4f6;
+  --color-code-text: #1b1b1f;
+  --color-shadow: 0 1px 2px rgba(15, 15, 20, 0.04), 0 4px 12px rgba(15, 15, 20, 0.06);
+  --color-shadow-strong: 0 4px 20px rgba(15, 15, 20, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --content-width: 760px;
+  --wide-width: 1080px;
+
+  --transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --color-bg: #0e0f12;
+  --color-bg-subtle: #16181d;
+  --color-bg-elevated: #1a1c22;
+  --color-border: #2a2d35;
+  --color-border-strong: #3a3e49;
+  --color-text: #e7e7ea;
+  --color-text-muted: #a5a6ad;
+  --color-text-subtle: #72737b;
+  --color-link: #e7e7ea;
+  --color-link-hover: #7aa7ff;
+  --color-accent: #7aa7ff;
+  --color-accent-soft: rgba(122, 167, 255, 0.16);
+  --color-code-bg: #16181d;
+  --color-code-text: #e7e7ea;
+  --color-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.35);
+  --color-shadow-strong: 0 4px 24px rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0e0f12;
+    --color-bg-subtle: #16181d;
+    --color-bg-elevated: #1a1c22;
+    --color-border: #2a2d35;
+    --color-border-strong: #3a3e49;
+    --color-text: #e7e7ea;
+    --color-text-muted: #a5a6ad;
+    --color-text-subtle: #72737b;
+    --color-link: #e7e7ea;
+    --color-link-hover: #7aa7ff;
+    --color-accent: #7aa7ff;
+    --color-accent-soft: rgba(122, 167, 255, 0.16);
+    --color-code-bg: #16181d;
+    --color-code-text: #e7e7ea;
+    --color-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.35);
+    --color-shadow-strong: 0 4px 24px rgba(0, 0, 0, 0.55);
+  }
+}
