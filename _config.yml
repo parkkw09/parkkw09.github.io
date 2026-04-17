@@ -1,19 +1,49 @@
-# Site Build Settings
+# ==========================
+# 사이트 빌드 설정 (Jekyll)
+# ==========================
 
-# jekyll-paginate configuration
-paginate:            5
+# 한 페이지에 보여줄 포스트 수
+paginate: 6
+paginate_path: "/page:num/"
 
-# Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+# 마크다운 & 하이라이터
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:               "끄적끄적 기술한줄"
-description:         "무공 비급을 전파합니다."
-author:              "피터 파크"
+# URL 형식: /포스트-제목
+permalink: /:title
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+# 사용 플러그인
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 사이트 메타 (jekyll-feed, jekyll-seo-tag 가 이 값을 사용)
+title: "끄적끄적 기술한줄"
+description: "무공 비급을 전파합니다."
+author: "피터 파크"
+lang: ko
+
+# 사이트 URL (GitHub Pages 배포 시 자동으로 사용자 설정이 우선됨)
+# url: "https://parkkw09.github.io"
+
+# 빌드에서 제외
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - millennial.gemspec
+  - README.md
+  - USAGE-ko.md
+  - .obsidian
+  - node_modules
+  - vendor
+
+# RSS 2.0 을 쓰려면 아래 주석 해제
 #feed:
 #  path: rss-feed.xml

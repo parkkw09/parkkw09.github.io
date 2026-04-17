@@ -1,36 +1,49 @@
-# Change 'comments' to true for Disqus comments
+# 사이트 공통 설정. 여기를 수정하면 전체 사이트에 반영됩니다.
+
+# Disqus 댓글을 사용할 경우 comments 를 true 로 변경하세요.
 #disqus:
 #  comments: false
 #  disqus_shortname: 'millennial-3'
 
-# If you are not using Google Analytics, please change 'google-ID' to an empty string
+# Giscus (GitHub Discussions 기반 댓글). 필요시 주석 해제하고 값 입력.
+#giscus:
+#  repo: 'parkkw09/parkkw09.github.io'
+#  repo_id: ''
+#  category: 'General'
+#  category_id: ''
+#  mapping: 'pathname'
+#  theme: 'preferred_color_scheme'
+
+# Google Analytics ID. 비워두면 스크립트가 로드되지 않습니다.
 google-ID: 'G-32412Y6YPE'
 
+# Google AdSense. 사용 시 client/slot 을 입력하세요. 비워두면 로드되지 않습니다.
+adsense-client: ''
+adsense-slot: ''
+
+# 상단 메뉴
 menu:
-- {name: '일상',         url: 'daily'}
-- {name: '발견',         url: 'discovery'}
-- {name: '기술',         url: 'tech'}
-- {name: '참고문서',      url: 'reference'}
-- {name: 'Information',         url: 'info'}
-- {name: 'About',       url: 'about'}
+  - {name: '일상',     url: 'daily'}
+  - {name: '발견',     url: 'discovery'}
+  - {name: '기술',     url: 'tech'}
+  - {name: '참고문서', url: 'reference'}
+  - {name: 'Info',     url: 'info'}
+  - {name: 'About',    url: 'about'}
 
-# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+# 소셜 아이콘. Font Awesome 6의 icon 이름을 사용합니다.
 social:
-- {icon: 'facebook', link:   'https://www.facebook.com/parkkw09'}
-- {icon: 'instagram', link:  'https://instagram.com/double_dragon_84'}
-- {icon: 'github', link:    'https://github.com/parkkw09'}
-- {icon: 'linkedin', link:    'https://www.linkedin.com/in/parkkw09/'}
-- {icon: 'envelope', link:   'mailto:parkkw09@gmail.com'}
-- {icon: 'rss-square', link: 'feed.xml'}
-# - {icon: 'rss-square', link: 'rss-feed.xml'}
+  - {icon: 'facebook',   link: 'https://www.facebook.com/parkkw09'}
+  - {icon: 'instagram',  link: 'https://instagram.com/double_dragon_84'}
+  - {icon: 'github',     link: 'https://github.com/parkkw09'}
+  - {icon: 'linkedin',   link: 'https://www.linkedin.com/in/parkkw09/'}
+  - {icon: 'envelope',   link: 'mailto:parkkw09@gmail.com'}
+  - {icon: 'rss',        link: '/feed.xml'}
 
-# Customize site text
+# UI 텍스트
 pagination:
-  next_page: '다음장'
-  previous_page: '이전장'
+  next_page: '다음'
+  previous_page: '이전'
 
-sharing_button_prompt: '공유하세요!'
-
-related_posts: '관련 포스트'
-
-post_date_prefix: 'Written on'
+sharing_button_prompt: '공유하기'
+related_posts: '관련 글'
+post_date_prefix: ''
