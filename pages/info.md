@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Tip/Information
+title: Tip / Information
+subtitle: 그때그때 메모해둔 명령어·삽질 기록 모음. (Obsidian 링크 문법이 섞여있어요.)
 permalink: /info
 ---
 

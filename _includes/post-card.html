@@ -1,0 +1,22 @@
+<li class="post-card">
+  <a href="{{ site.github.url }}{{ include.post.url }}" class="post-card-link">
+    <div class="post-card-thumb {% unless include.post.image %}is-placeholder{% endunless %}"
+         {% if include.post.image %}style="background-image:url({{ site.github.url }}/assets/img/{{ include.post.image }})"{% endif %}>
+      {% unless include.post.image %}
+        <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+      {% endunless %}
+    </div>
+    <div class="post-card-body">
+      <div class="post-card-meta">
+        {% if include.post.categories and include.post.categories.size > 0 %}
+          <span class="badge">{{ include.post.categories | first }}</span>
+        {% endif %}
+        <span>{{ include.post.date | date: "%Y년 %-m월 %-d일" }}</span>
+      </div>
+      <h2>{{ include.post.title }}</h2>
+      {% if include.post.excerpt %}
+        <p class="post-card-excerpt">{{ include.post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
+      {% endif %}
+    </div>
+  </a>
+</li>

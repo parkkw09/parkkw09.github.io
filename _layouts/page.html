@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<div class="page-content">
-  <h1>
-    {{ page.title }}
-  </h1>
-  <article>
+<article class="page-content">
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}
+    <p style="color: var(--color-text-muted); margin-top: -0.5rem;">{{ page.subtitle }}</p>
+  {% endif %}
+  <div>
     {{ content }}
-  </article>
-</div>
+  </div>
+</article>

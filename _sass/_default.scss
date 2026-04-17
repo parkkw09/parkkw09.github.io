@@ -1,34 +1,31 @@
 /*
-  Site container
+  Layout container
 */
-
 .container {
-  width: $container-width;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.container a {
-  text-decoration: underline;
-}
+
 .content-wrapper {
-  padding-top: $header-thickness+10px;
-  margin: auto;
-  display: block;
-  width: $container-width - 20px;
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  padding: calc(#{$header-thickness} + var(--space-6)) var(--space-5) var(--space-7);
 }
-.content-wrapper h1 {
-  margin: 20px 0px 5px;
+
+/* Narrow pages (posts, simple pages) */
+.page-content,
+.post-content {
+  max-width: var(--content-width);
+  margin: 0 auto;
 }
-@media (max-width: $container-width) {
-  .container {
-    width: 95vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
+@media (max-width: 640px) {
   .content-wrapper {
-    padding-top: $header-thickness+10px;
-    margin: auto;
-    display: block;
-    width: 95vw;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+    padding-top: calc(#{$header-thickness} + var(--space-4));
   }
 }

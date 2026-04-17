@@ -1,6 +1,18 @@
 <footer class="footer">
-  {% for item in site.data.settings.social %}
-    <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-  {% endfor %}
-  <div class="footer-description"><a href="{{ site.github.url }}/">{{ site.title }} | {{ site.description }} by {{ site.author }}</a></div>
+  <div class="footer-inner">
+    <div class="social-list">
+      {% for item in site.data.settings.social %}
+        {% assign icon_class = 'fa-brands' %}
+        {% if item.icon == 'envelope' or item.icon == 'rss-square' or item.icon == 'rss' %}
+          {% assign icon_class = 'fa-solid' %}
+        {% endif %}
+        <a href="{{ item.link }}" class="menu-link" target="_blank" rel="noopener" aria-label="{{ item.icon }}">
+          <i class="{{ icon_class }} fa-{{ item.icon }}" aria-hidden="true"></i>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="footer-description">
+      <a href="{{ site.github.url }}/">© {{ 'now' | date: '%Y' }} {{ site.author }} · {{ site.title }}</a>
+    </div>
+  </div>
 </footer>
